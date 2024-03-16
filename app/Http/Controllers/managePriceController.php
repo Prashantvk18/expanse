@@ -117,7 +117,7 @@ class managePriceController extends Controller
         
         $user = \Auth::user();
         if($request->mid > 0){
-            $trip_member =  Trip_member::where('id',$request->mid)->first();
+            $trip_member1 =  Trip_member::where('id',$request->mid)->first();
             $msg = 'Memeber Updated successfulluy';
             $status= 'success'; //->where('member_mobile',$request->mem_number)
             if($trip_member->member_mobile != $request->mem_number){
